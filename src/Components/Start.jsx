@@ -8,7 +8,7 @@ export function Start({toggle,handleCategoryChange,handleDifficulty,handleQuesti
     return(
         <div className="Starter">
             <h1>Quizzical</h1>
-            <div style={{ width: "250px",marginBlock:"20px"}}>
+            <div style={{ width: "350px",marginBlock:"20px"}}>
             <Select options={categories} placeholder="Select category"  isClearable onChange={handleCategoryChange}/>
             </div>
             <div className='options'>
