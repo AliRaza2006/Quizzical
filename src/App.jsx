@@ -52,12 +52,16 @@ export default function App() {
         {
           options[i]=he.decode(options[i])
         }
-        if(item.type!="multiple")
+        if(item.type==="multiple")
         {
           for (let i = options.length - 1; i > 0; i--) {
               const j = Math.floor(Math.random() * (i + 1));
               [options[i], options[j]] = [options[j], options[i]];
           }
+        }
+        else if(item.type!="multiple"&&options[0]==="False")
+        {
+          [options[0],options[1]]=[options[1],options[0]]
         }
         return({
           ...item,
